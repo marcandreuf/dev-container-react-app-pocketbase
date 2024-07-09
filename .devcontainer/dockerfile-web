@@ -1,0 +1,7 @@
+FROM node:22-bookworm
+
+
+RUN apt update && apt upgrade -y && \
+    npm install -g typescript
+
+WORKDIR /workspace

@@ -1,0 +1,23 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "React + Pocketbase Dev environment",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"dockerComposeFile":"docker-compose.yml",
+    "service": "web",
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    "customizations": {
+		"vscode": {
+			"extensions": [
+				"expo.vscode-expo-tools",
+				"msjsdiag.vscode-react-native",
+				"mhutchie.git-graph",
+				"rodrigovallades.es7-react-js-snippets",
+				"sourcegraph.cody-ai"
+			]
+		}
+	},
+	"forwardPorts": [3000, 8080]	
+}
+
