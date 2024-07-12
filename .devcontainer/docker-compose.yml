@@ -25,9 +25,10 @@ services:
       dockerfile: dockerfile-web
     image: react-pocketbase-dev-env-web
     container_name: react-pocketbase-dev-env-web
+    user: node
     volumes:
       - ..:/workspace:cached
-    user: "node"
+      - ${HOME}/.local/share/pnpm:/home/node/.local/share/pnpm:cached
     command: /bin/sh -c "while sleep 1000; do :; done"
     depends_on:
       backend:

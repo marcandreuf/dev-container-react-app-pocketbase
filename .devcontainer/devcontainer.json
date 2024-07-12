@@ -7,8 +7,18 @@
     "service": "web",
     "workspaceFolder": "/workspace",
     "shutdownAction": "stopCompose",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {}
+	},
+	"mounts": [
+		"source=${localEnv:HOME}/.gitconfig,target=/home/node/.gitconfig,type=bind,consistency=cached",
+		"source=${localEnv:HOME}/.ssh/id_ed25519,target=/home/node/.ssh/id_ed25519,type=bind,consistency=cached"
+	],
     "customizations": {
 		"vscode": {
+			"settings": {
+				"extensions.ignoreRecommendations": true
+			},
 			"extensions": [
 				"expo.vscode-expo-tools",
 				"msjsdiag.vscode-react-native",
