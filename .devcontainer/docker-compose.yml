@@ -10,7 +10,7 @@ services:
     container_name: react-pocketbase-dev-env-pocketbase
     volumes:
       - ../pocketbase/migrations:/pb/pb_migrations:cached
-      - ../pocketbase/hooks:/pb/pb_hooks:cached
+      - ../pocketbase/pb_hooks:/pb/pb_hooks:cached
       - ../pocketbase/pb_data:/pb/pb_data:cached
     healthcheck:
       test: ["CMD-SHELL", "pgrep pocketbase && echo 'Pocketbase is running...' || exit 1"]
